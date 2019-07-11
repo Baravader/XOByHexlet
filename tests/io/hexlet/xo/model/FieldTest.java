@@ -1,5 +1,7 @@
 package io.hexlet.xo.model;
 
+import io.hexlet.xo.model.exceptions.AlreadyOccupiedException;
+import io.hexlet.xo.model.exceptions.InvalidPointException;
 import org.junit.Test;
 
 import java.awt.*;
@@ -9,7 +11,7 @@ import static org.junit.Assert.*;
 public class FieldTest {
 
     @Test
-    public void getSize() {
+    public void getSize() throws Exception {
         final Field field = new Field();
         assertEquals(3,field.getSize());
     }
@@ -19,7 +21,7 @@ public class FieldTest {
     }
 
     @Test
-    public void setFigure() {
+    public void setFigure() throws Exception{
         Field field = new Field();
         Point point = new Point(1,2);
         field.setFigure(point,Figure.X);

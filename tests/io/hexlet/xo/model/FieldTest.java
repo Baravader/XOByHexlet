@@ -27,4 +27,11 @@ public class FieldTest {
         field.setFigure(point,Figure.X);
         assertEquals(Figure.X,field.getFigure(point));
     }
+
+    @Test
+    public void testGetFigureWhenFigureIsNotSet() throws Exception{
+        Field field = new Field();
+        Point point = new Point(1,2);
+        assertNull(field.getFigure(point));
+    }
 }

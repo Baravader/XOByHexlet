@@ -40,6 +40,6 @@ public class Field {
     }
 
     private boolean checkCoordinate(final  int coordinate,final int maxCoordinate){
-        return coordinate >= MIN_COORDINATE && coordinate < field.length;
+        return coordinate >= MIN_COORDINATE && coordinate < maxCoordinate;
     }
 }
